@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"sso.userManagement.controller"},{"l":"sso.userManagement.dao"},{"l":"sso.userManagement.domain"},{"l":"sso.userManagement.service"}]

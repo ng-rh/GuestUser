@@ -1,0 +1,5 @@
+unnamed package
+sso.userManagement.controller
+sso.userManagement.dao
+sso.userManagement.domain
+sso.userManagement.service
