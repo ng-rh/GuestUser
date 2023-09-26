@@ -1,7 +1,7 @@
 # Use an official JBoss Web Server image with Tomcat 11 as the base image.
 FROM registry.redhat.io/jboss-webserver-5/jws56-openjdk11-openshift-rhel8:latest
 
-ARG DB_HOST=localhost
+ARG DB_HOST=mysql.guest-user.svc.cluster.local
 ARG DB_NAME=ssoRegisterGuest
 ARG DB_USER=admin	
 ARG DB_PASSWORD=adminpass
