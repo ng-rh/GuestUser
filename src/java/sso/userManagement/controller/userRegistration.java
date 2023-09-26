@@ -147,14 +147,14 @@ public class userRegistration extends HttpServlet {
              
               // check if email belongs to @vssc.gov.in
               
-              if(service.isThisEmailCanbeSent(emailID)==false)
+              /*if(service.isThisEmailCanbeSent(emailID)==false)
               {
                     logger.info("This EmailID is not Valid");
                     errors.put("email", "This EmailID is not Valid");
                     request.setAttribute("error", errors);
                     request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
                     return;
-              }
+              }*/
              
               
               
