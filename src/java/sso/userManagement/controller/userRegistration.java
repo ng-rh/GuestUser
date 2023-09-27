@@ -177,7 +177,7 @@ public class userRegistration extends HttpServlet {
                }
                checkPasswordPolicy(password,service,errors,request,response);
                
-                
+                /*
                 if(errors.isEmpty())
                 {
                     String oneTimeTokenForEmailValidation=UUID.randomUUID().toString();
@@ -202,7 +202,7 @@ public class userRegistration extends HttpServlet {
                     request.setAttribute("error", errors);
                     request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
                 }
-                
+                */
             
         } catch (IOException | SQLException | ServletException e) 
             {
