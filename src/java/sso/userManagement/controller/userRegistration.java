@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import sso.userManagement.dao.ConnectionPool;
-import sso.userManagement.service.mailService;
+//import sso.userManagement.service.mailService;
 import sso.userManagement.service.userService;
 
 /**
@@ -189,10 +189,10 @@ public class userRegistration extends HttpServlet {
                           String applicationURL =  "https://ssoguest.vssc.dos.gov.in/GuestUser/verifyEmail?task=" + oneTimeTokenForEmailValidation;
                             
                           
-                        mailService mailService = new mailService();
+                        //mailService mailService = new mailService();
                             
                             String msg="A request has been Generated to  create an account for you, ignore if you have not generated this Email, otherwise proceed to click the given link.";
-                            mailService.sendMail(emailID, "Email Verification ", applicationURL,msg);
+                            //mailService.sendMail(emailID, "Email Verification ", applicationURL,msg);
                             response.sendRedirect("registerSuccess");
                             //request.getRequestDispatcher("jsp/registerSuccess.jsp").forward(request, response);
                     }
