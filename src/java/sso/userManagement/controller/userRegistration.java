@@ -91,13 +91,12 @@ public class userRegistration extends HttpServlet {
                     }
                }
                
-             /* if(service.isThisEmailFromVSSC(emailID))
-              {
-                    errors.put("email", "This Service is not for VSSC Employees.");
-                    request.setAttribute("error", errors);
-                    request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
-                    return;
-              }*/
+              if(service.isThisEmailFromVSSC(emailID)) {
+                  errors.put("email", "This Service is not for VSSC Employees.");
+                  request.setAttribute("error", errors);
+                  request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
+                  return;
+              }
               if (service.isThisEmailRegisteredMayNotVerified(emailID)) // check if this email is Registered and Verified
               {
                    logger.info("This EmailID is already registered ");
