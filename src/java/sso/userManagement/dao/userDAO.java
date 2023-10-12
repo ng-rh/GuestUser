@@ -130,14 +130,14 @@ public class userDAO {
     
     
     
-    //final String getUserObject="select * from Users where userId=? and active=? and accountVerified=?";
-    final String getUserObject="select * from Users where userId=? and active=?";
+    final String getUserObject="select * from Users where userId=? and active=? and accountVerified=?";
+    //final String getUserObject="select * from Users where userId=? and active=?";
     public User getUserObject(String userId) throws SQLException
     {
         PreparedStatement stmt=conn.prepareStatement(getUserObject);
         stmt.setString(1, userId);
         stmt.setBoolean(2, true);
-        //stmt.setBoolean(3, true);
+        stmt.setBoolean(3, true);
         ResultSet rs=stmt.executeQuery();
         if(rs.next())
         {
