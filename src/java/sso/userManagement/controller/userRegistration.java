@@ -145,7 +145,7 @@ public class userRegistration extends HttpServlet {
                
              
               // check if email belongs to @vssc.gov.in
-              
+              /*
               if(service.isThisEmailCanbeSent(emailID)==false)
               {
                     logger.info("This EmailID is not Valid");
@@ -153,7 +153,7 @@ public class userRegistration extends HttpServlet {
                     request.setAttribute("error", errors);
                     request.getRequestDispatcher("jsp/error.jsp").forward(request, response);
                     return;
-              }
+              }*/
              
               
               
@@ -188,11 +188,11 @@ public class userRegistration extends HttpServlet {
                           String applicationURL =  "https://ssoguest.vssc.dos.gov.in/GuestUser/verifyEmail?task=" + oneTimeTokenForEmailValidation;
                             
                          //neha commented this line
-                        mailService mailService = new mailService();
+                        //mailService mailService = new mailService();
                             
                             String msg="A request has been Generated to  create an account for you, ignore if you have not generated this Email, otherwise proceed to click the given link.";
                             //neha commented this line
-                            mailService.sendMail(emailID, "Email Verification ", applicationURL,msg);
+                            //mailService.sendMail(emailID, "Email Verification ", applicationURL,msg);
                             response.sendRedirect("registerSuccess");
                             //request.getRequestDispatcher("jsp/registerSuccess.jsp").forward(request, response);
                     }
